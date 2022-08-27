@@ -12,8 +12,29 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return MaterialApp(
-      home: Center(
-          child: Container( width: 100, height: 100, color: Colors.red )
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('플러터 앱'),
+        ),
+        body: Row(
+          children: [
+            Icon(Icons.star),
+            Icon(Icons.star)
+          ],
+        ),
+        bottomNavigationBar: BottomAppBar(
+          child: SizedBox(
+            height: 70,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(Icons.phone),
+                Icon(Icons.message),
+                Icon(Icons.contact_page),
+              ],
+            ),
+          )
+        ),
       )
     );
   }
